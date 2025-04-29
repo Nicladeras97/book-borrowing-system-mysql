@@ -1,78 +1,110 @@
-# Book Borrowing System
+# 📚 Book Management System
 
-## Description
-The Book Borrowing System is a digital solution designed to streamline the borrowing and returning of books. It replaces the manual process used by librarians, allowing for easier tracking of book availability and transactions.
+## 📝 Description  
+The **Book Management System** is a digital solution that streamlines the process of borrowing and returning books. It replaces the traditional manual method used by librarians, allowing for easier tracking of book availability, borrower activity, and automated notifications.
 
-## Features
-- Book search by title, author, or category
-- Borrowing and returning process tracking
-- Book Reports for lost, damaged and overdue books.
+---
 
-## Requirements
+## 🚀 Features
+
+- 🔍 **Book Search** by Title, Author, or Category (via Report Module)  
+- 🔄 **Borrowing & Returning Process Tracking**  
+- ➕ **Add, Edit, Delete**, and **Import Books** with downloadable import templates  
+- 📊 **Comprehensive Book Reports**:
+  - Inventory Report  
+  - Borrowed Books Report  
+  - Lost Books Report  
+  - Damaged Books Report  
+  - Overdue Books Report  
+  - Books with Multiple Copies  
+  - Borrowers Report  
+- 📧 **Email Notifications**:
+  - Sends real-time email updates for newly added books based on borrower preferences  
+  - Sends reminders automatically for upcoming due dates and overdue books  
+
+---
+
+## 💻 System Requirements
+
 ```sh
 - Microsoft Visual Studio 2022
 - VB.NET 2022
 - XAMPP (MySQL Database)
-- MySQL Connector 9.2
+- MySQL Connector 9.2 (ODBC)
 ```
 
-## Installation
-### Step 1: Download and Install Dependencies
-```sh
-1. Install Microsoft Visual Studio 2022
-2. Install XAMPP and enable MySQL
-3. Download and install MySQL Connector 9.2
-```
+---
 
-```sh
-https://dev.mysql.com/downloads/connector/odbc/
-```
+## ⚙️ Installation Guide
 
-4. Download the Windows (x86, 64-bit), MSI Installer based on the link I provided about MySQL Connector 9.2.
+### 1️⃣ Download & Install Dependencies
+- [ ] Install Microsoft Visual Studio 2022  
+- [ ] Install **XAMPP** and enable the **MySQL** module  
+- [ ] Download and install [MySQL Connector 9.2 (ODBC)](https://dev.mysql.com/downloads/connector/odbc/)  
+  - Choose: Windows (x86, 64-bit), MSI Installer  
 
-### Step 2: Clone the Repository
+---
+
+### 2️⃣ Clone the Repository
+
 ```sh
 git clone https://github.com/Nicladeras97/book-borrowing-system-mysql.git
 ```
 
-### Step 3: Set Up the Database
-```sh
-1. Open XAMPP and start the MySQL module
-2. Open phpMyAdmin and create a new database (e.g., book-borrowing)
-3. Import the provided SQL file 
-```
+---
 
-### Step 4: Configure the Database Connection in VB.NET
-#### Configuring in ODBC Data Source Administrator (`odbcad32.exe`)
-```sh
-1. Press Windows + R, type odbcad32.exe, and press Enter.
-2. Go to the System DSN tab and click Add.
-3. Select MySQL ODBC Driver and click Finish.
-4. Enter the following details:
-   - Data Source Name: My SQL Connections
-   - Server: localhost
-   - User: root
-   - Password: 
-   - Database: book-borrowing
-5. Click Test to ensure the connection works, then click OK.
-```
+### 3️⃣ Set Up the Database
 
-### Step 5:
-#### Configuring database connection in vb 2022
-```sh
-1. Go to your project in Microsoft Visual Studio 2022.
-2. Go to Tools tab and click the "Connect to Database".
-3. Select Microsoft ODBC Data Source.
-4. Click "Use user or system data source name" and click the dropdown.
-5. Find you Data Source Name(My SQL Connections).
-4. Enter the following details:
-   - User: root
-5. Click Test to ensure the connection works, then click OK.
-```
+1. Launch **XAMPP** and start the **MySQL** module  
+2. Open `phpMyAdmin` and create a new database (e.g., `book-borrowing`)  
+3. Import the provided `.sql` file located in the project folder  
 
-### Step 6: Run the Application
-```sh
-1. Open the project in Visual Studio
-2. Build the solution (Ctrl + Shift + B)
-3. Run the project (F5)
-```
+---
+
+### 4️⃣ Configure ODBC Connection
+
+1. Press `Windows + R`, type `odbcad32.exe`, and press Enter  
+2. Go to the **System DSN** tab → Click **Add**  
+3. Select **MySQL ODBC Driver** → Click **Finish**  
+4. Enter the following details:  
+   - **Data Source Name**: My SQL Connections  
+   - **Server**: `localhost`  
+   - **User**: `root`  
+   - **Password**: *(leave blank)*  
+   - **Database**: `book-borrowing`  
+5. Click **Test** to verify the connection, then click **OK**  
+
+---
+
+### 5️⃣ Configure the Database Connection in Visual Studio
+
+1. In Visual Studio, go to the **Tools** tab → Select **Connect to Database**  
+2. Choose **Microsoft ODBC Data Source**  
+3. Select **"Use user or system data source name"** and choose **My SQL Connections**  
+4. Enter the **User** as `root`, test the connection, and click OK  
+
+---
+
+### 6️⃣ Run the Application
+
+1. Open the solution file (`.sln`) in Visual Studio  
+2. Build the solution using `Ctrl + Shift + B`  
+3. Run the application using `F5`  
+
+---
+
+## 🙌 Credits
+
+**Bachelor of Science in Computer Science (BSCS)**  
+**College of Mary Immaculate – 2025**
+
+- **Monica L. Cano** – Lead Developer  
+  *(Database, Backend, Frontend)*  
+- **Rhea Martin** – UI/UX Designer  
+  *(Design, Frontend Assistance)*  
+- **Kimberly Mae Jeresano** – Documentation  
+  *(Thesis Papers and Reports)*  
+- **April Joy Reyes** – Documentation & Backend Assistant  
+  *(Thesis Papers, Backend Support)*  
+- **Alyssa Pacunio** – Email Automation  
+  *(Developed the automatic email system for borrower due date reminders)*
